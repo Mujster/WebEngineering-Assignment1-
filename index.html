@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <title>Job Listings</title>
+</head>
+<body>
+    <div class="header"><img src="header.png" alt="img"></div>
+    <div class="filter-container">
+        <div class="filter">
+            <div class="active"></div>
+            <button class="clearbtn" onclick="HideFilter()">Clear</button>
+        </div>
+    </div>
+    <div class="container">
+    </div>
+    <button class="addbtn" onclick="AddNewJob()"></button>
+    <div class="popup">
+        <form>
+        <h4>Publish New Job</h4>
+           <button class="close-popup" onclick="closePopup()">X</button>
+           <label id="company-label">Enter Company Name</label>
+           <input type="text" id="company-name">
+           <label id="position-label">Enter Position</label>
+           <input type="text" id="job-position">
+           <label id="role-label">Enter Role</label>
+           <input type="text" id="job-role">
+           <label id="contract-label">Contract Type</label>
+           <div class="selectbox">
+            <select>
+                <option value="Contract">Contract</option>
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+            </select>
+           </div>
+           <label id="country-label">Enter your country:</label>
+           <div id="country">
+           <select name="country">
+                <option value="USA">United States</option>   
+                <option value="Canada">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Germany">Germany</option>
+           </select>
+        </div>
+           <label id="languages" for="language">Languages:</label>
+           <input type="text" id="input-languages" name="input-languages" placeholder="e.g., SQL, JavaScript, HTML, CSS">
+           <label id="img-label">Upload Company Photo</label>
+           <input type="file" id="company-photo">
+           <button type="button" id="submit-button" onclick="submitJob()">Submit</button>
+        </form> 
+    </div>
+    <div class="description-popup">
+        <h1>Job Description</h1>
+        <button id="close-btn" onclick="DescClose()">Close</button>
+    </div>
+</body>
+</html>
